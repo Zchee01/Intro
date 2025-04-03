@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* 设置背景颜色 */
 }
 
 header {
@@ -19,11 +19,7 @@ section {
     border-radius: 10px;
 }
 
-header img {
-    border-radius: 50%; /* 让图片变成圆形 */
-    width: 150px; /* 控制图片宽度 */
-    height: 150px; /* 让宽高一致，变成圆形 */
-    object-fit: cover; /* 让图片裁剪填充 */
-    border: 3px solid white; /* 添加白色边框 */
-    margin-top: 10px;
+body {
+    background-image: url('background.jpg'); /* 设置背景图片 */
+    background-size: cover; /* 确保背景图片覆盖整个页面 */
 }
