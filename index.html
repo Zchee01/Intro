@@ -5,6 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chee Personal Detail</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* 卡片翻转效果 */
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 400px;
+            perspective: 1000px;
+            margin: 40px auto;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .flip-card-front {
+            background-color: #fff;
+            color: black;
+        }
+
+        .flip-card-back {
+            background-color: #f4f4f4;
+            transform: rotateY(180deg);
+        }
+
+        .archery-photos {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .archery-photos img {
+            width: 80px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -29,30 +88,38 @@
         <p>📍 Address: Penang, Malaysia</p>
     </section>
 
+    <!-- 兴趣专栏：射箭卡片 -->
     <section id="section-archery">
-        <h2>我的兴趣：射箭</h2>
-        <p>射箭是一项充满挑战和乐趣的运动，我喜欢它带来的专注和成就感。</p>
-        
-        <!-- 照片展示 -->
-        <div class="archery-photos">
-            <img src="archery1.jpg" alt="射箭比赛" />
-            <img src="archery2.jpg" alt="射箭练习" />
-            <img src="archery3.jpg" alt="射箭风景" />
+        <h2>我的兴趣</h2>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>我的兴趣</h2>
+                </div>
+                <div class="flip-card-back">
+                    <h2>射箭</h2>
+                    <p>射箭是一项充满挑战和乐趣的运动，我喜欢它带来的专注和成就感。</p>
+                    <div class="archery-photos">
+                        <img src="archery1.jpg" alt="射箭比赛" />
+                        <img src="archery2.jpg" alt="射箭练习" />
+                        <img src="archery3.jpg" alt="射箭风景" />
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>    
+    </section>
 
     <section>
-    <h2>Socail Media</h2>
-    <ul>
-        <li><a href="https://www.linkedin.com/in/zhiqian-chee-b425841a2/" target="_blank">LinkedIn</a></li>
-        <li><a href="https://www.facebook.com/zhiqian.chee/about" target="_blank">Facebook</a></li>
-        <li><a href="https://www.instagram.com/cheezhiqian?igsh=MTN5bGVtb3prYmZsZQ==" target="_blank">Instagram</a></li>
-    </ul>
-</section>
+        <h2>Socail Media</h2>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/zhiqian-chee-b425841a2/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.facebook.com/zhiqian.chee/about" target="_blank">Facebook</a></li>
+            <li><a href="https://www.instagram.com/cheezhiqian?igsh=MTN5bGVtb3prYmZsZQ==" target="_blank">Instagram</a></li>
+        </ul>
+    </section>
 
-<section>
-    <button onclick="location.href='zchee01@google.com'">Contact Me</button>
-</section>
-
+    <section>
+        <button onclick="location.href='mailto:zchee01@google.com'">Contact Me</button>
+    </section>
 </body>
 </html>
