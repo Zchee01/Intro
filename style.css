@@ -134,17 +134,28 @@ button:hover {
 /* 射箭照片排版 */
 .archery-photos {
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 15px;
 }
-.archery-photos img {
-    width: 100px;
-    height: 70px;
+
+.photo-item {
+    text-align: center;
+}
+
+.photo-item img {
+    width: 250px;
+    height: 160px;
     object-fit: cover;
-    border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.photo-item p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #555;
 }
 
 /* 平滑滚动 */
